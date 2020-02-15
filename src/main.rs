@@ -41,8 +41,9 @@ fn read_lines(args: &Arguments) -> Vec<String> {
                 // XXX: 여기 개선
                 if args.ignore_head_line <= n {
                     ret.push(buffer);
+                } else {
+                    n += 1;
                 }
-                n += 1;
             }
             _ => break,
         }
